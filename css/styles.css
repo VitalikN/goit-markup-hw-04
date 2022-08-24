@@ -11,6 +11,8 @@
   --border--headr: #ececec;
   --buttun: #188ce8;
   --border--icon: #eeeeee;
+  --link-f-in-twit: #afb1b8;
+  --outline--background-color: #c4c4c4;
 }
 *,
 *::before,
@@ -106,9 +108,7 @@ img {
 .main-contact:not(:last-child) {
   margin-right: 50px;
 }
-.main-contact {
-  align-items: center;
-}
+
 .link {
   color: inherit;
   text-decoration: none;
@@ -141,6 +141,7 @@ img {
 .contact {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 .contact-link .icon-contact {
   margin-right: 10px;
@@ -215,7 +216,7 @@ img {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: #c4c4c4;
+  background-color: var(--outline--background-color);
 }
 
 .visually-hidden {
@@ -250,7 +251,7 @@ img {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid #c4c4c4;
+  outline: 1px solid var(--outline--background-color);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/work.jpg');
   background-repeat: no-repeat;
@@ -282,7 +283,7 @@ img {
   width: 270px;
   height: 120px;
   border-radius: 4px;
-  background-color: #f5f4fa;
+  background-color: var(--background);
   margin-bottom: 30px;
   align-items: center;
   justify-content: center;
@@ -358,11 +359,38 @@ img {
   color: var(--title-text-color);
   font-size: 16px;
   line-height: 1.2;
+  margin-bottom: 16px;
+
   /* margin-bottom: 30px; */
 }
 .aside {
-  padding: 30px 0;
+  padding-top: 30px;
   text-align: center;
+}
+.team-list-link {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 0 32px;
+  padding-bottom: 30px;
+}
+.team-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--link-f-in-twit);
+}
+.team-svg {
+  fill: currentColor;
+}
+.team-link:hover,
+.team-link:focus {
+  color: var(--team-text--background);
+  border-radius: 50%;
+  background-color: var(--accent-color);
 }
 
 /* ================5 секція ============= */
@@ -380,9 +408,11 @@ img {
   justify-content: center;
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--link-f-in-twit);
   border-radius: 4px;
-  color: #afb1b8;
+  color: var(--link-f-in-twit);
+}
+.icon-svg {
   fill: currentColor;
 }
 .svg-logo-link:hover,
@@ -398,9 +428,12 @@ img {
 
   background-color: var(--heder-footer);
 }
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
 .footer-list {
   font-style: normal;
-  margin-top: 20px;
 }
 .footer-contact-list:not(:last-child) {
   margin-bottom: 9px;
@@ -429,6 +462,47 @@ img {
   color: var(--accent-color);
 }
 
+.footer-logo-contact {
+  margin-right: 70px;
+}
+
+.footer-cont-list {
+  margin-top: 20px;
+}
+
+.footer-list-link {
+  display: flex;
+}
+
+.title-svg {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--primary-bg-color);
+}
+.list-svg:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-link-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--primary-bg-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-link-svg:hover,
+.footer-link-svg:focus {
+  background-color: var(--accent-color);
+}
+.footer-svg {
+  fill: currentColor;
+}
 /*================ проджект ================*/
 
 .section.portfolio {
@@ -447,9 +521,8 @@ img {
   color: var(--primari-text-color);
   text-decoration: none;
 }
-.sidebar .portfolio-link:hover,
-.sidebar .portfolio-link:focus {
-  color: #188ce8;
+.sidebar-list:hover,
+.portfolio-list:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
