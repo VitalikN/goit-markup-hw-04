@@ -417,8 +417,8 @@ img {
 }
 .svg-logo-link:hover,
 .svg-logo-link:focus {
-  color: #2196f3;
-  border: 1px solid #2196f3;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 /*================ ФУТЕР ================*/
